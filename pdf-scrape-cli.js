@@ -164,7 +164,7 @@ const PDFScrape = require("./pdf-scrape-api.js")
             result = result.map((f) => ([ f.p, f.x, f.y, f.w, f.h, f.t ]))
     }
     if (argv.outputFormat === "csv") {
-        result = await new Promise((resolve) => {
+        result = await new Promise((resolve, reject) => {
             csv.stringify(result, (err, output) => {
                 if (err)
                     reject(err)
@@ -176,7 +176,7 @@ const PDFScrape = require("./pdf-scrape-api.js")
 
     /*  write output  */
     await cli.output(argv.outputFile, result, {
-        dump:     argv.outputFormat === "csv" ? false : true,
+        dump:     (argv.outputFormat !== "csv"),
         format:   argv.outputFormat,
         encoding: "utf8"
     })
