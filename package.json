@@ -1,0 +1,59 @@
+{
+    "name":        "pdf-scrape",
+    "homepage":    "http://github.com/rse/pdf-scrape",
+    "description": "PDF Text Scraping",
+    "version":     "0.9.0",
+    "license":     "MIT",
+    "author": {
+        "name":    "Dr. Ralf S. Engelschall",
+        "email":   "rse@engelschall.com",
+        "url":     "http://engelschall.com"
+    },
+    "keywords": [
+        "pdf", "text", "scrape", "scraping", "scraper", "position", "coordinates"
+    ],
+    "repository": {
+        "type": "git",
+        "url":  "git://github.com/rse/pdf-scrape.git"
+    },
+    "bugs": {
+        "url":  "http://github.com/rse/pdf-scrape/issues"
+    },
+    "main":     "./pdf-scrape-api.js",
+    "bin":      { "pdf-scrape": "./pdf-scrape-cli.js" },
+    "devDependencies": {
+        "babel-eslint":           "10.1.0",
+        "eslint":                 "7.12.1",
+        "eslint-config-standard": "16.0.1",
+        "eslint-plugin-standard": "4.0.2",
+        "eslint-plugin-promise":  "4.2.1",
+        "eslint-plugin-import":   "2.22.1",
+        "eslint-plugin-node":     "11.1.0",
+        "npm-run-all":            "4.1.5",
+        "pkg":                    "4.4.9",
+        "remark-cli":             "9.0.0",
+        "remark":                 "13.0.0",
+        "remark-man":             "7.0.0",
+        "@types/node":            "14.14.6"
+    },
+    "dependencies" : {
+        "yargs":                  "16.1.0",
+        "pdfjs-dist":             "2.5.207",
+        "cli-io":                 "0.9.1",
+        "csv":                    "5.3.2"
+    },
+    "engines": {
+        "node":                   ">=12.0.0"
+    },
+    "scripts": {
+        "prepublishOnly":         "npm-run-all -s lint",
+        "build":                  "npm-run-all -s lint generate:man1 generate:man3 package",
+        "clean":                  "npm-run-all -s package:clean generate:clean",
+        "lint":                   "eslint --config eslint.yaml pdf-scrape-api.js pdf-scrape-cli.js",
+        "package":                "make package",
+        "package:clean":          "rm -f pdf-scrape-linux-debian-x64.tar.xz pdf-scrape-linux-alpine-x64.tar.xz",
+        "generate:man1":          "remark --quiet --use remark-man --output pdf-scrape.1 pdf-scrape-cli.md",
+        "generate:man3":          "remark --quiet --use remark-man --output pdf-scrape.3 pdf-scrape-api.md",
+        "generate:clean":         "rm -f pdf-scrape.3 pdf-scrape.8"
+    }
+}
