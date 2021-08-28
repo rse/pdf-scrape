@@ -34,6 +34,19 @@ The Unix manual pages for the
 [CLI](https://github.com/rse/pdf-scrape/blob/master/pdf-scrape-cli.md) contain
 detailed usage information.
 
+Example
+-------
+
+```sh
+$ pdf-scrape sample.pdf
+1,692.7686,328.5921,33.77,10,Content
+1,451.4961,156.7606,0,0,
+1,451.4961,156.7606,27.828,12,know
+1,451.4961,191.4422,0,0,
+1,451.4961,191.4422,57.91199999999999,12,understand
+[]...]
+```
+
 License
 -------
 
