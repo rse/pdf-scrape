@@ -62,6 +62,7 @@ const PDFScrape = require("./pdf-scrape-api.js")
             "[-f|--output-format` <format>] " +
             "<pdf-file>|-"
         )
+        .version(false)
         .option("h", {
             describe: "show program help information",
             alias:    "help", type: "boolean", default: false
@@ -102,7 +103,6 @@ const PDFScrape = require("./pdf-scrape-api.js")
             describe: "output format",
             alias:    "output-format", type: "string", nargs: 1, default: "csv"
         })
-        .version(false)
         .strict(true)
         .showHelpOnFail(true)
         .demand(1)
