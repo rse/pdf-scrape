@@ -47,7 +47,7 @@ class PDFScrape {
     async findAll (data) {
         /*  open PDF document  */
         const doc = await PDFJS.getDocument({
-            data:       data,
+            data,
             cMapUrl:    PDFJScmap,
             cMapPacked: true,
             verbosity:  0
