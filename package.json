@@ -2,7 +2,7 @@
     "name":        "pdf-scrape",
     "homepage":    "http://github.com/rse/pdf-scrape",
     "description": "PDF Text Scraping",
-    "version":     "0.9.5",
+    "version":     "1.0.0",
     "license":     "MIT",
     "author": {
         "name":    "Dr. Ralf S. Engelschall",
