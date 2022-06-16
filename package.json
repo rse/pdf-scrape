@@ -23,23 +23,23 @@
     "bin":      { "pdf-scrape": "./pdf-scrape-cli.js" },
     "devDependencies": {
         "babel-eslint":           "10.1.0",
-        "eslint":                 "7.32.0",
-        "eslint-config-standard": "16.0.3",
-        "eslint-plugin-promise":  "5.1.1",
-        "eslint-plugin-import":   "2.25.2",
+        "eslint":                 "8.17.0",
+        "eslint-config-standard": "17.0.0",
+        "eslint-plugin-promise":  "6.0.0",
+        "eslint-plugin-import":   "2.26.0",
         "eslint-plugin-node":     "11.1.0",
         "npm-run-all":            "4.1.5",
-        "pkg":                    "5.4.1",
-        "remark-cli":             "10.0.0",
-        "remark":                 "14.0.1",
-        "remark-man":             "8.0.0",
-        "@types/node":            "16.11.6"
+        "pkg":                    "5.7.0",
+        "remark-cli":             "10.0.1",
+        "remark":                 "14.0.2",
+        "remark-man":             "8.0.1",
+        "@types/node":            "18.0.0"
     },
     "dependencies" : {
-        "yargs":                  "17.2.1",
-        "pdfjs-dist":             "2.10.377",
-        "cli-io":                 "0.9.6",
-        "csv":                    "5.5.3"
+        "yargs":                  "17.5.1",
+        "pdfjs-dist":             "2.14.305",
+        "cli-io":                 "0.9.8",
+        "csv":                    "6.1.2"
     },
     "engines": {
         "node":                   ">=12.0.0"
